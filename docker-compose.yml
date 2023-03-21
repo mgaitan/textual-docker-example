@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  textual: 
+      # FIXME : build this image on top of shiphero/shipping-api:latest
+      image: textual:${name-alpine}
+      environment:
+        COLORTERM: truecolor
+        TERM: xterm-256color
+
+      stdin_open: true  
+      tty: true         
+
+      # command: python -m textual
