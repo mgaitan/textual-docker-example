@@ -20,3 +20,15 @@ run-fastapi: build-fastapi
 
 run-fastapi-standard: build-fastapi
 	docker run -it textual:fastapi 
+
+compose-run-official: build-official
+	docker-compose run -e name=official textual
+
+compose-run-alpine: build-alpine
+	docker-compose run -e name=alpine textual 
+
+compose-run-official: build-official
+	docker-compose run -e name=official textual
+
+compose-run-fastapi: build-fastapi
+	docker-compose run -e name=fastapi textual 
